@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خبر</title>
+    <link rel="stylesheet" href="{%static 'news\s.css'%}">
+</head>
+<body>
+    <table style="width: 100%"> 
+        <tr style="height: 100px;background-color:cadetblue">
+            <th aling="right">اخبار کیهان</th>
+        </tr>
+        
+        <td></td>
+        <tr>
+            <td style="height: 300px;">
+                <img src="{%static 'news/saa.jpg'%}">
+                {%for k in khabar%}
+                <table>
+
+               
+                    <tr>
+                        
+                        <td>{{k.onvan}}</td>
+                        <hr>
+                        
+                    </tr>
+                    <tr>
+                       
+                        <td>{{k.title}}</td>
+                        <hr>
+                    </tr>
+                </table>
+                <br/>
+                {%endfor%}
+        </tr>
+           
+            
+            </td>
+           
+
+        
+    </table>
+</body>
+</html>
